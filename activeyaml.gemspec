@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
+require_relative 'lib/active_yaml/version'
+
 Gem::Specification.new do |s|
   s.name        = 'activeyaml'
-  s.version     = '0.1.1'
+  s.version     = ActiveYaml::VERSION
   s.summary     = 'activeyaml'
   s.description = 'activeyaml'
   s.authors     = ['Kirill Leonov']
@@ -14,4 +16,5 @@ Gem::Specification.new do |s|
   s.metadata['homepage_uri'] = s.homepage
   s.metadata['source_code_uri'] = s.homepage
   s.metadata['documentation_uri'] = s.homepage
+  s.add_dependency 'psych', '~> 5.1'
 end
