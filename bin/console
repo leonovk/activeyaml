@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'activeyaml'
+require 'active_yaml'
 
 require 'irb'
 IRB.start(__FILE__)
