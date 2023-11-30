@@ -5,8 +5,8 @@ require_relative 'lib/active_yaml/version'
 Gem::Specification.new do |s|
   s.name        = 'activeyaml'
   s.version     = ActiveYaml::VERSION
-  s.summary     = 'activeyaml'
-  s.description = 'activeyaml'
+  s.summary     = 'yaml object-relational mapping'
+  s.description = 'framework for convenient and complete work with Yaml files'
   s.authors     = ['Kirill Leonov']
   s.email       = 'leonov7632@gmail.com'
   s.files       = Dir.glob('lib/**/*')

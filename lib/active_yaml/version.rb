@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-class ActiveYaml
-  VERSION = '0.1.3'
+module ActiveYaml
+  VERSION = '0.1.4'
 end
