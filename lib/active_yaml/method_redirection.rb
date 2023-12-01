@@ -1,17 +1,18 @@
 # frozen_string_literal: true
 
-require_relative 'base_object'
+require_relative 'yaml_hash'
 
 module ActiveYaml
-  # base mapper
-  class MethodMapper
+  # A module with methods for implementing tracking methods.
+  # In the model in order to proxy them into a hash with YML data
+  module MethodRedirection
     def method_missing(method, *args, &block)
-      method_name = method.to_s
-      if yaml_data[method_name]
-        value = yaml_data[method_name]
+      value = yaml_data[method.to_s]
+
+      if value
         return value unless value.is_a?(Hash)
 
-        BaseObject.new(value)
+        YamlHash.new(value)
       else
         super
       end

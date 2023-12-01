@@ -22,7 +22,7 @@ Require if necessary:
 ```ruby
 require 'active_yaml'
 ```
-### Usage
+### Usage with model
 
 You can create models that will take data from your Yaml files. Suppose you have the following Yaml file: `examples/example.yaml`. With the following content:
 
@@ -34,6 +34,7 @@ yaml:
     users:
       first: '1'
 ```
+(This and all subsequent examples will use this yaml file)
 
 Then, you could do the following:
 
@@ -62,6 +63,14 @@ class User < ActiveYaml::Base
     yaml.kek.lol
   end
 end
+```
+
+### Usage without model
+You also don't have to create models to use this framework. After that, an object will be instantiated in the user variable, allowing chains of calls to be made. To do this you can do the following:
+
+```ruby
+user = ActiveYaml.create('examples/example.yaml')
+user.yaml.kek.lol # output: 'text'
 ```
 
 ### Contribution
