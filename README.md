@@ -65,6 +65,12 @@ class User < ActiveYaml::Base
 end
 ```
 
+There is also method `yaml_data` which will return the contents of the Yaml file as a regular hash.
+
+```ruby
+user.yaml_data # will return a hash with the contents from the Yaml file
+```
+
 ### Usage without model
 You also don't have to create models to use this framework. After that, an object will be instantiated in the user variable, allowing chains of calls to be made. To do this you can do the following:
 

@@ -19,3 +19,5 @@ jobs:
         run: bundle install
       - name: Run cops
         run: bundle exec rubocop
+      - name: Run test
+        run: rake test

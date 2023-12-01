@@ -4,7 +4,7 @@ module ActiveYaml
   # Class for creating hashes of similar objects
   class YamlHash
     def initialize(hash)
-      @hash = hash
+      @hash = hash || {}
     end
 
     def method_missing(method, *args, &block)
