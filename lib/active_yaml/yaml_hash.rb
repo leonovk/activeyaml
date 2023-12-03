@@ -9,7 +9,7 @@ module ActiveYaml
       @hash = hash || {}
     end
 
-    def method_missing(method, *args, &block)
+    def method_missing(method, *args, &)
       value = hash[method.to_s]
 
       if value

@@ -19,21 +19,23 @@ module ActiveYaml
     # rubocop:disable Naming/VariableNumber
     def test_call_chain
       result_1 = @user.yaml.kek.lol
-      assert_equal result_1, 'text'
+
+      assert_equal 'text', result_1
 
       result_2 = @user.yaml.kek.users.first
-      assert_equal result_2, '1'
+
+      assert_equal '1', result_2
     end
     # rubocop:enable Naming/VariableNumber
 
     def test_some_method
-      assert_equal @user.some_method, 'text'
+      assert_equal 'text', @user.some_method
     end
 
     def test_incomplete_call
       result = @user.yaml.kek
 
-      assert_equal result.is_a?(ActiveYaml::YamlHash), true
+      assert result.is_a?(ActiveYaml::YamlHash)
     end
 
     def test_yaml_data
