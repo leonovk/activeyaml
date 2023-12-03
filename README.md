@@ -41,7 +41,7 @@ Then, you could do the following:
 ```ruby
 require 'active_yaml'
 
-class User < ActiveYaml::Base
+class User < ActiveYaml::BaseModel
   yaml 'examples/example.yaml'
 end
 ```
@@ -64,7 +64,7 @@ h.is_a?(Hash) # true
 You can also use data from Yaml files inside your model.
 
 ```ruby
-class User < ActiveYaml::Base
+class User < ActiveYaml::BaseModel
   yaml 'examples/example.yaml'
 
   # The method will return "text"

@@ -2,7 +2,7 @@
 
 require_relative '../../test_helper'
 
-class SomeUser < ActiveYaml::Base
+class SomeUser < ActiveYaml::BaseModel
   yaml '.examples/example.yaml'
 
   def some_method
@@ -11,7 +11,7 @@ class SomeUser < ActiveYaml::Base
 end
 
 module ActiveYaml
-  class BaseTest < Minitest::Test
+  class BaseModelTest < Minitest::Test
     def setup
       @user = SomeUser.new
     end
