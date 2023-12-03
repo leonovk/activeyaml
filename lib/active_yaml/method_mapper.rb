@@ -3,7 +3,8 @@
 require_relative 'yaml_hash'
 
 module ActiveYaml
-  # no doc
+  # A module containing methods that allow you to track method calls,
+  # and compare them with data from the YML file
   module MethodMapper
     def method_missing(method, *args, &)
       value = yaml_data[method.to_s]
