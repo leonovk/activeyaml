@@ -27,7 +27,7 @@ require 'active_yaml'
 You can create models that will take data from your Yaml files. Suppose you have the following Yaml file: `examples/example.yaml`. With the following content:
 
 ```yaml
-yaml:
+start:
   kek:
     lol: 'text'
     cheburek: 'cheburek'
@@ -49,14 +49,14 @@ You can then create instances of your model and use call chains to retrieve data
 
 ```ruby
 user = User.new
-user.yaml.kek.lol # output: 'text'
-user.yaml.kek.users.first # output: '1'
+user.start.kek.lol # output: 'text'
+user.start.kek.users.first # output: '1'
 ```
 
 If you complete the chain not to the final value. You will get an object like a hash. It won't respond to []. However, you can use a dot to go through the values further. This object also has a “hash” method, which returns the current received hash.
 
 ```ruby
-h = user.yaml.kek.hash
+h = user.start.kek.hash
 h == {'lok' => 'text'} # true
 h.is_a?(Hash) # true
 ```
@@ -69,7 +69,7 @@ class User < ActiveYaml::BaseModel
 
   # The method will return "text"
   def test_method
-    yaml.kek.lol
+    start.kek.lol
   end
 end
 ```
@@ -81,11 +81,28 @@ user.yaml_data # will return a hash with the contents from the Yaml file
 ```
 
 ### Usage without model
+
+You can add class methods to your class to work with Yaml files directly without creating class instances
+
+```ruby
+class User
+  extend ActiveYaml::ClassMethods
+  yaml 'examples/example.yaml'
+end
+```
+
+After this, you can use class methods to make chains of calls.
+```ruby
+User.start.kek.lol # output: 'text'
+```
+With this use case, method `yaml_data` is also supported.
+
+
 You also don't have to create models to use this framework. After that, an object will be instantiated in the user variable, allowing chains of calls to be made. To do this you can do the following:
 
 ```ruby
 user = ActiveYaml.create('examples/example.yaml')
-user.yaml.kek.lol # output: 'text'
+user.start.kek.lol # output: 'text'
 ```
 
 ### Contribution
