@@ -4,7 +4,8 @@ require_relative 'method_mapper'
 require_relative 'parser'
 
 module ActiveYaml
-  # no doc
+  # A module that allows you to use this gem,
+  # without creating instances of the class
   module ClassMethods
     include MethodMapper
 
