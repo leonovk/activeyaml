@@ -2,6 +2,8 @@
 
 require_relative '../test_helper'
 
+# This test essentially covers:
+# lib/active_yaml/factory_hash.rb
 class ActiveYamlTest < Minitest::Test
   def setup
     @test_data = ActiveYaml.create('.examples/example.yaml')
