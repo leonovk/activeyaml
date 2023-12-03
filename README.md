@@ -52,7 +52,16 @@ user = User.new
 user.yaml.kek.lol # output: 'text'
 user.yaml.kek.users.first # output: '1'
 ```
-If you complete the chain not to the final value. You will get an object like a hash. It won't respond to []. However, you can use a dot to go through the values further. You can also use data from Yaml files inside your model.
+
+If you complete the chain not to the final value. You will get an object like a hash. It won't respond to []. However, you can use a dot to go through the values further. This object also has a “hash” method, which returns the current received hash.
+
+```ruby
+h = user.yaml.kek.hash
+h == {'lok' => 'text'} # true
+h.is_a?(Hash) # true
+```
+
+You can also use data from Yaml files inside your model.
 
 ```ruby
 class User < ActiveYaml::Base

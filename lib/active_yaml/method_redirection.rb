@@ -6,7 +6,7 @@ module ActiveYaml
   # A module with methods for implementing tracking methods.
   # In the model in order to proxy them into a hash with YML data
   module MethodRedirection
-    def method_missing(method, *args, &block)
+    def method_missing(method, *args, &)
       value = yaml_data[method.to_s]
 
       if value

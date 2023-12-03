@@ -3,11 +3,13 @@
 module ActiveYaml
   # Class for creating hashes of similar objects
   class YamlHash
+    attr_reader :hash
+
     def initialize(hash)
       @hash = hash || {}
     end
 
-    def method_missing(method, *args, &block)
+    def method_missing(method, *args, &)
       value = hash[method.to_s]
 
       if value
@@ -30,9 +32,5 @@ module ActiveYaml
     def respond_to_missing?(method, include_private = false)
       hash.key?(method.to_s) || super
     end
-
-    private
-
-    attr_reader :hash
   end
 end
