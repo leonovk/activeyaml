@@ -6,4 +6,4 @@ require 'minitest/reporters'
 require_relative '../lib/active_yaml'
 require_relative '../lib/active_yaml/version'
 
-Minitest::Reporters.use! [Minitest::Reporters::ProgressReporter.new, Minitest::Reporters::HtmlReporter.new]
+Minitest::Reporters.use!

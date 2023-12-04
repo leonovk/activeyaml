@@ -3,6 +3,8 @@
 require 'rake/testtask'
 require_relative 'lib/active_yaml/version'
 
+# run rake test MINITEST_REPORTER=HtmlReporter
+# for generate html reports
 Rake::TestTask.new(:test) do |t|
   t.libs << 'test'
   t.libs << 'lib'
