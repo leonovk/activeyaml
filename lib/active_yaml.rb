@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'active_yaml/parser'
-require_relative 'active_yaml/method_mapper'
+require_relative 'active_yaml/method_mapping'
 require_relative 'active_yaml/factory_hash'
 require_relative 'active_yaml/class_methods'
 
@@ -11,7 +11,7 @@ module ActiveYaml
 
   # Base class to inherit from to create models
   class BaseModel
-    include MethodMapper
+    include MethodMapping
 
     def self.yaml(file_path)
       define_method(:yaml_data) do
