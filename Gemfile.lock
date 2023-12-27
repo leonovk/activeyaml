@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    activeyaml (1.2.1)
+    activeyaml (1.2.2)
       psych (~> 5.1)
 
 GEM

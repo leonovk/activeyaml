@@ -18,7 +18,9 @@ class ActiveYamlTest < Minitest::Test
 
     result_2 = @test_data.start.kek.users.first
 
-    assert_equal '1', result_2
+    assert_equal 'Kirill', result_2
+
+    assert @test_data.start.kek.users.is_a?(Array)
   end
   # rubocop:enable Naming/VariableNumber
 
