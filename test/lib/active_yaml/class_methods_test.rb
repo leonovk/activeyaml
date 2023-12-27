@@ -17,7 +17,9 @@ module ActiveYaml
 
       result_2 = SomeUser.start.kek.users.first
 
-      assert_equal '1', result_2
+      assert_equal 'Kirill', result_2
+
+      assert SomeUser.start.kek.users.is_a?(Array)
     end
     # rubocop:enable Naming/VariableNumber
 
@@ -29,7 +31,7 @@ module ActiveYaml
 
     def test_yaml_data
       expect_hash = { 'start' => { 'kek' => { 'lol' => 'text', 'cheburek' => 'cheburek',
-                                              'users' => { 'first' => '1' } } } }
+                                              'users' => %w[Kirill Ekaterina] } } }
 
       assert_equal SomeUser.yaml_data, expect_hash
     end

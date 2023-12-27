@@ -3,4 +3,5 @@ start:
     lol: 'text'
     cheburek: 'cheburek'
     users:
-      first: '1'
+      - 'Kirill'
+      - 'Ekaterina'
