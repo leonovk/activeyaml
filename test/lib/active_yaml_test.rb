@@ -6,8 +6,8 @@ require_relative '../test_helper'
 # lib/active_yaml/factory_hash.rb
 class ActiveYamlTest < Minitest::Test
   def setup
-    @test_data = ActiveYaml.create('.examples/example.yaml')
-    @test_empty_data = ActiveYaml.create('.examples/empty.yaml')
+    @test_data = ActiveYaml.create('test/examples/example.yaml')
+    @test_empty_data = ActiveYaml.create('test/examples/empty.yaml')
   end
 
   # rubocop:disable Naming/VariableNumber
