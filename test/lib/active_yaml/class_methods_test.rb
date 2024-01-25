@@ -4,7 +4,7 @@ require_relative '../../test_helper'
 
 class SomeUser
   extend ActiveYaml::ClassMethods
-  yaml '.examples/example.yaml'
+  yaml 'test/examples/example.yaml'
 end
 
 module ActiveYaml

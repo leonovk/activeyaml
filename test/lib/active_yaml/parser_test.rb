@@ -7,7 +7,7 @@ module ActiveYaml
     def test_parse
       expect_hash = { 'start' => { 'kek' => { 'lol' => 'text', 'cheburek' => 'cheburek',
                                               'users' => %w[Kirill Ekaterina] } } }
-      result = Parser.parse('.examples/example.yaml')
+      result = Parser.parse('test/examples/example.yaml')
 
       assert_equal result, expect_hash
     end

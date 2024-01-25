@@ -3,7 +3,7 @@
 require_relative '../../test_helper'
 
 class SomeUser < ActiveYaml::BaseModel
-  yaml '.examples/example.yaml'
+  yaml 'test/examples/example.yaml'
 
   def some_method
     start.kek.lol
