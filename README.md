@@ -4,11 +4,12 @@
 
 Framework that allows you to use model classes for mapping Yaml files.
 
-### Installation
+## Installation
 
 ```ruby
 gem 'activeyaml'
 ```
+
 And then execute:
 
 ```bundle install```
@@ -22,7 +23,8 @@ Require if necessary:
 ```ruby
 require 'active_yaml'
 ```
-### Usage with model
+
+## Usage with model
 
 You can create models that will take data from your Yaml files. Suppose you have the following Yaml file: `examples/example.yaml`. With the following content:
 
@@ -34,17 +36,19 @@ start:
     users:
       first: '1'
 ```
+
 (This and all subsequent examples will use this yaml file)
 
 Then, you could do the following:
 
 ```ruby
-require 'active_yaml'
+require 'activeyaml'
 
 class User < ActiveYaml::BaseModel
   yaml 'examples/example.yaml'
 end
 ```
+
 You can then create instances of your model and use call chains to retrieve data from the Yaml file.
 
 ```ruby
@@ -92,11 +96,12 @@ end
 ```
 
 After this, you can use class methods to make chains of calls.
+
 ```ruby
 User.start.kek.lol # output: 'text'
 ```
-With this use case, method `yaml_data` is also supported.
 
+With this use case, method `yaml_data` is also supported.
 
 You also don't have to create models to use this framework. After that, an object will be instantiated in the user variable, allowing chains of calls to be made. To do this you can do the following:
 
@@ -105,6 +110,6 @@ user = ActiveYaml.create('examples/example.yaml')
 user.start.kek.lol # output: 'text'
 ```
 
-### Contribution
+## Contribution
 
 If you would like to contribute to the development, submit a pull request with your changes. We welcome any contributions that improve the service. You can also view the current project board here.  You can also contribute by reporting bugs or suggesting new features. Please use the GitHub issues for that.
