@@ -21,7 +21,7 @@ Or install it yourself as:
 Require if necessary:
 
 ```ruby
-require 'active_yaml'
+require 'activeyaml'
 ```
 
 ## Usage with model
