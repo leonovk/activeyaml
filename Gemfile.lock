@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    activeyaml (1.2.2)
+    activeyaml (1.2.3)
       psych (~> 5.1)
 
 GEM
@@ -23,7 +23,7 @@ GEM
     parser (3.2.2.4)
       ast (~> 2.4.1)
       racc
-    psych (5.1.1.1)
+    psych (5.1.2)
       stringio
     racc (1.7.3)
     rainbow (3.1.1)
