@@ -20,7 +20,7 @@ jobs:
         run: bundle install
 
       - name: Run RuboCop
-        run: bundle exec rake rubocop
+        run: bundle exec rubocop
 
   test:
     name: Ruby ${{ matrix.ruby }}
