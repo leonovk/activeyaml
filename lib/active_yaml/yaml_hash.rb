@@ -16,7 +16,7 @@ module ActiveYaml
 
     # The main logic of this class is implemented in this method.
     # Allows you to filter method calls and redirect them to a hash by key
-    def method_missing(method, *args, &)
+    def method_missing(method, *args, &block)
       value = @hash[method.to_s]
 
       if value

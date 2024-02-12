@@ -6,7 +6,7 @@ module ActiveYaml
   # A module containing methods that allow you to track method calls,
   # and compare them with data from the YML file
   module MethodMapping
-    def method_missing(method, *args, &)
+    def method_missing(method, *args, &block)
       value = yaml_data[method.to_s]
 
       if value
