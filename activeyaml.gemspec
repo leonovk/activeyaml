@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.files       = Dir.glob('lib/**/*')
   s.homepage    = 'https://github.com/leonovk/activeyaml'
   s.license     = 'MIT'
-  s.required_ruby_version = '>= 2.4'
+  s.required_ruby_version = '>= 3.0'
   s.metadata['homepage_uri'] = s.homepage
   s.metadata['source_code_uri'] = s.homepage
   s.metadata['documentation_uri'] = s.homepage
