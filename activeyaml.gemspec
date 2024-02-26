@@ -16,5 +16,4 @@ Gem::Specification.new do |s|
   s.metadata['homepage_uri'] = s.homepage
   s.metadata['source_code_uri'] = s.homepage
   s.metadata['documentation_uri'] = s.homepage
-  s.add_dependency 'psych', '~> 5.1'
 end
