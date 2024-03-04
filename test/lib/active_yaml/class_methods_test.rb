@@ -19,14 +19,14 @@ module ActiveYaml
 
       assert_equal 'Kirill', result_2
 
-      assert SomeUser.start.kek.users.is_a?(Array)
+      assert_kind_of Array, SomeUser.start.kek.users
     end
     # rubocop:enable Naming/VariableNumber
 
     def test_incomplete_call
       result = SomeUser.start.kek
 
-      assert result.is_a?(ActiveYaml::YamlHash)
+      assert_kind_of ActiveYaml::YamlHash, result
     end
 
     def test_yaml_data

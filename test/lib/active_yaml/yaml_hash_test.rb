@@ -31,7 +31,7 @@ module ActiveYaml
     def test_hash
       assert_equal @yaml_hash.hash, @hash
 
-      assert @yaml_hash.hash.is_a?(Hash)
+      assert_kind_of Hash, @yaml_hash.hash
     end
 
     def test_call_chain_hash
@@ -39,7 +39,7 @@ module ActiveYaml
 
       assert_equal result, @hash['key6']
 
-      assert result.is_a?(Hash)
+      assert_kind_of Hash, result
     end
 
     def test_call_chain
@@ -51,7 +51,7 @@ module ActiveYaml
     def test_not_full_call_chain
       result = @yaml_hash.key1.key2
 
-      assert result.is_a?(ActiveYaml::YamlHash)
+      assert_kind_of ActiveYaml::YamlHash, result
     end
 
     def test_when_hash_is_value
@@ -65,7 +65,7 @@ module ActiveYaml
 
       assert_equal result, @hash['key1']['key8']['hash']
 
-      assert result.is_a?(Hash)
+      assert_kind_of Hash, result
     end
 
     def test_when_hash_is_array
@@ -73,7 +73,7 @@ module ActiveYaml
 
       assert_equal result, @hash['key1']['key2']['hash']
 
-      assert result.is_a?(Array)
+      assert_kind_of Array, result
     end
   end
 end

@@ -20,17 +20,17 @@ class ActiveYamlTest < Minitest::Test
 
     assert_equal 'Kirill', result_2
 
-    assert @test_data.start.kek.users.is_a?(Array)
+    assert_kind_of Array, @test_data.start.kek.users
   end
   # rubocop:enable Naming/VariableNumber
 
   def test_incomplete_call
     result = @test_data.start.kek
 
-    assert result.is_a?(ActiveYaml::YamlHash)
+    assert_kind_of ActiveYaml::YamlHash, result
   end
 
   def test_empty_file
-    assert @test_empty_data.is_a?(ActiveYaml::YamlHash)
+    assert_kind_of ActiveYaml::YamlHash, @test_empty_data
   end
 end
