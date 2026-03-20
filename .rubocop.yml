@@ -9,3 +9,6 @@ Gemspec/RequireMFA:
 
 Gemspec/RequiredRubyVersion:
   Enabled: false
+
+Style/OneClassPerFile:
+  Enabled: false
